@@ -1,3 +1,11 @@
+use std::env;
+
 fn main() {
-    println!("Hello, world!");
+    let args: Vec<String> = env::args().collect();
+
+    let query = &args[1];
+    let file = &args[2];
+    
+    println!("args: {:?}", args);
+    println!("query: {}, file: {}", query, file);
 }
